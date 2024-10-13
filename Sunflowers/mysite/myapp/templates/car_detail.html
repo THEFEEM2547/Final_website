@@ -1,0 +1,45 @@
+{% load custom_filters %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Model Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .car-detail {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        .car-specs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .car-specs li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="car-detail">
+        <h1>{{ car.make }} {{ car.model }}</h1>
+        <ul>
+            <li><strong>Year:</strong> {{ car.year }}</li>
+            <li><strong>Engine:</strong> {{ car.engine }}</li>
+            <li><strong>Transmission:</strong> {{ car.transmission }}</li>
+            <li><strong>Fuel Type:</strong> {{ car.fuel_type }}</li>
+            <li><strong>Price:</strong> ${{ car.price }}</li>
+            <li><strong>Mileage:</strong> {{ car.mileage }} miles</li>
+        </ul>
+    </div>
+</body>
+</html>

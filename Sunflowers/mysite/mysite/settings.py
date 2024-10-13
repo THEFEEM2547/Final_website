@@ -81,6 +81,9 @@ DATABASES = {
     }
 }
 
+# MongoDB connection settings
+MONGO_DATABASE_NAME = 'car_database'
+MONGO_URI = 'mongodb://localhost:27017/'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
